@@ -4,7 +4,8 @@ defmodule GibberishChatWeb.Router do
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
-    plug :fetch_flash
+    plug :fetch_live_flash
+    plug :put_root_layout, {GibberishChatWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -16,8 +17,14 @@ defmodule GibberishChatWeb.Router do
   scope "/", GibberishChatWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    resources "/users", UserController
+    live "/", PageLive, :index
+    live "/messages", MessageLive.Index, :index
+    live "/messages/new", MessageLive.Index, :new
+    live "/messages/:id/edit", MessageLive.Index, :edit
+
+    live "/messages/:id", MessageLive.Show, :show
+    live "/messages/:id/show/edit", MessageLive.Show, :edit
+    live "/chat", MessageLive.Chat, :chat
   end
 
   # Other scopes may use custom stacks.

@@ -13,10 +13,10 @@ config :gibberish_chat,
 # Configures the endpoint
 config :gibberish_chat, GibberishChatWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "/BYplfI6JB/jXWzLYfIpogyoZc0u7BB4dE/I0ZmFEH8cKFJzTDHQvF1pOT97loLS",
+  secret_key_base: "c1jCDoyvP1x3jpIEwHD1GEofL+kH1aQiG9FIMWSSjuqshJzCyGAyBUPNFe50ejfT",
   render_errors: [view: GibberishChatWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: GibberishChat.PubSub,
-  live_view: [signing_salt: "M3vYwzLK"]
+  live_view: [signing_salt: "dvLg2z7b"]
 
 # Configures Elixir's Logger
 config :logger, :console,

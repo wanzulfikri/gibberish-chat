@@ -7,7 +7,7 @@ defmodule GibberishChatWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_gibberish_chat_key",
-    signing_salt: "nDlkKYKt"
+    signing_salt: "+NMIy95I"
   ]
 
   socket "/socket", GibberishChatWeb.UserSocket,

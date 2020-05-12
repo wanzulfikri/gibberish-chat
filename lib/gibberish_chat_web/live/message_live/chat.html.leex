@@ -1,0 +1,17 @@
+<div id="chat-window">
+<%= for message <- @messages do %>
+<li><%= message.inserted_at %>    <%= message.body %></li>
+<% end %>
+</div>
+<%= f = form_for @changeset, "#",
+  id: "chat-form",
+  phx_change: "validate",
+  phx_submit: "send" %>
+
+  <%= label f, :body, "" %>
+  <%= text_input f, :body %>
+  <%= error_tag f, :body %>
+
+  <%= submit "Send", phx_disable_with: "Saving..." %>
+</form>
+
