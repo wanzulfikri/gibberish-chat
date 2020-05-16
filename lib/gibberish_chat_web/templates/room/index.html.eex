@@ -1,1 +1,9 @@
-<p><%= @room %></p>
+<%= if @rooms == []  do %>
+No rooms are available
+<% else %>
+<ol>
+<%= for room <- @rooms do %>
+<li><%= room.topic %> <a href="/rooms/<%= room.id %>">Join</a> </li>
+<% end %>
+</ol>
+<% end %>
