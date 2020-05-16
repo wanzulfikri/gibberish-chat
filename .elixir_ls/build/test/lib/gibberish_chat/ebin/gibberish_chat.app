@@ -9,6 +9,7 @@
                         'Elixir.GibberishChat.Application',
                         'Elixir.GibberishChat.Conversations',
                         'Elixir.GibberishChat.Conversations.Message',
+                        'Elixir.GibberishChat.Conversations.Room',
                         'Elixir.GibberishChat.DataCase',
                         'Elixir.GibberishChat.Repo','Elixir.GibberishChatWeb',
                         'Elixir.GibberishChatWeb.ChannelCase',
