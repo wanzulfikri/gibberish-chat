@@ -25,6 +25,8 @@
                         'Elixir.GibberishChatWeb.MessageLive.Show',
                         'Elixir.GibberishChatWeb.ModalComponent',
                         'Elixir.GibberishChatWeb.PageLive',
+                        'Elixir.GibberishChatWeb.RoomController',
+                        'Elixir.GibberishChatWeb.RoomView',
                         'Elixir.GibberishChatWeb.Router',
                         'Elixir.GibberishChatWeb.Router.Helpers',
                         'Elixir.GibberishChatWeb.Telemetry',
