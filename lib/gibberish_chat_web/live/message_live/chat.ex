@@ -31,7 +31,6 @@ defmodule GibberishChatWeb.MessageLive.Chat do
   def handle_event("send", %{"message" => params}, socket) do
     case Conversations.create_message(params) do
       {:ok, message} ->
-        IO.inspect(message)
         Phoenix.PubSub.broadcast_from(GibberishChat.PubSub, self(), "new-message", message)
 
         {:noreply,
